@@ -36,7 +36,7 @@ while cap.isOpened():
     df = results.pandas().xyxy[0]
     
     for i in df['name']: # name->labels
-        print(i)
+        print(i) #ini print
         lst.append(i)
         
     if cv2.waitKey(10) & 0xFF == ord('q'):

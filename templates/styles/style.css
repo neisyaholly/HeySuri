@@ -10,6 +10,7 @@ body {
 }
 
 .navbar {
+    position: absolute;
     width: 100vw;
     height: 50px;
     background-color: black;
@@ -17,4 +18,65 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: blinking 1.5s infinite;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* animation-iteration-count: ; */
+    transition: none;
+}
+
+.mainpage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    font-size: 20px;
+    color: white;
+}
+
+.check_box {
+    display:none;
+}
+
+.check_box + label{
+    background:url('../assets/mic.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.check_box:checked + label{
+    background:url('../assets/mic-aktif.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100px;
+    width: 200px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+@keyframes blinking {
+    0% {
+        background-image: url('../assets/bukamata.png');
+    }
+
+    50% {
+        background-image: url('../assets/tutupmata.png');
+    }
+    
+    100% {
+        background-image: url('../assets/bukamata.png');
+    }
 }
